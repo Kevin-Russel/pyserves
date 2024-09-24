@@ -16,12 +16,12 @@ const connection = mysql.createConnection({
   }
 });
 
-connection.connect((error) => { 
-    if (error) {
-        console.error('Error connecting to MySQL:', error);
-    } else {
-        console.log('MySQL Connected'); 
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL: ' + err.stack);
+        return;
     }
+    console.log('Connected to MySQL as id ' + connection.threadId);
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
