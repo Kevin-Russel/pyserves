@@ -10,7 +10,10 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '#Include1',
-    database: 'pyserves'
+    database: 'pyserves',
+     authPlugins: {
+    mysql_native_password: () => require('mysql2/lib/auth_plugins').auth('mysql_native_password')
+  }
 });
 
 connection.connect((error) => { 
