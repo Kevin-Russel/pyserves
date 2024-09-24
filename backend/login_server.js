@@ -11,7 +11,7 @@ const app = express();
 const connection = mysql.createConnection({ 
     host: 'localhost',
     user: 'root',
-    password: '#Include1',
+    password: '#Include1903',
     database: 'pyserves',
      authPlugins: {
     mysql_native_password: () => require('mysql2/lib/auth_plugins').auth('mysql_native_password')
