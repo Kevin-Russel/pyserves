@@ -387,6 +387,6 @@ app.get('/admin_approve_request', (req, res) => {
 
 
 // Start the server
-app.listen(5100, () => {
+app.listen(22, () => {
     console.log('Server started on http://localhost:5100'); 
 });
